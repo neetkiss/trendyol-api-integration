@@ -1,8 +1,9 @@
 <?php
 
-require 'vendor/autoload.php';
+require __DIR__.'/../../vendor/autoload.php';
 
 use Trendyol\Client\TrendyolClient;
+use Trendyol\Exceptions\TrendyolException;
 use Trendyol\Services\ClaimIntegration\ClaimService;
 
 // Trendyol Client'ı oluşturun
