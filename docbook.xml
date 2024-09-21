@@ -1,0 +1,113 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
+  <title>Trendyol PHP API Integration</title>
+  <subtitle>Comprehensive Guide to Using Trendyol's API with PHP</subtitle>
+  <author>
+    <personname>
+      <firstname>Your</firstname>
+      <surname>Name</surname>
+    </personname>
+  </author>
+  <date>2024-09-21</date>
+  <chapter>
+    <title>Introduction</title>
+    <para>This document provides a detailed overview of the Trendyol PHP API integration library. It covers installation, usage, and all the features provided by the library.</para>
+  </chapter>
+  <chapter>
+    <title>Installation</title>
+    <para>To install the package, use Composer:</para>
+    <screen>
+      <command>composer require yourname/trendyol-php-api</command>
+    </screen>
+  </chapter>
+  <chapter>
+    <title>Product Integration</title>
+    <section>
+      <title>ProductService</title>
+      <para>Manages products, prices, and stock information.</para>
+    </section>
+    <section>
+      <title>CategoryService</title>
+      <para>Retrieves category information and attributes.</para>
+    </section>
+    <section>
+      <title>BrandService</title>
+      <para>Fetches brand information.</para>
+    </section>
+    <section>
+      <title>CargoService</title>
+      <para>Handles the cargo providers and their details.</para>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Order Integration</title>
+    <section>
+      <title>OrderService</title>
+      <para>Fetches and updates order information.</para>
+    </section>
+    <section>
+      <title>ShipmentService</title>
+      <para>Updates shipment details.</para>
+    </section>
+    <section>
+      <title>InvoiceService</title>
+      <para>Sends invoice details to Trendyol.</para>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Claim Integration</title>
+    <section>
+      <title>ClaimService</title>
+      <para>Manages return orders and handles return requests, approvals, and rejections.</para>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Question & Answer Integration</title>
+    <section>
+      <title>QuestionAnswerService</title>
+      <para>Handles customer questions and allows you to answer them.</para>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Usage Examples</title>
+    <section>
+      <title>Product Integration Example</title>
+      <para>Example code for using the ProductService to fetch products:</para>
+      <programlisting language="php">
+        <![CDATA[
+        use Trendyol\Client\TrendyolClient;
+        use Trendyol\Services\ProductIntegration\ProductService;
+
+        $client = new TrendyolClient('username', 'password', 'supplierId');
+        $productService = new ProductService($client);
+
+        // Get all products
+        $products = $productService->getProducts(['page' => 1, 'size' => 50]);
+        print_r($products);
+        ]]>
+      </programlisting>
+    </section>
+    <section>
+      <title>Order Integration Example</title>
+      <para>Example code for using the OrderService to fetch orders:</para>
+      <programlisting language="php">
+        <![CDATA[
+        use Trendyol\Client\TrendyolClient;
+        use Trendyol\Services\OrderIntegration\OrderService;
+
+        $client = new TrendyolClient('username', 'password', 'supplierId');
+        $orderService = new OrderService($client);
+
+        // Get all orders
+        $orders = $orderService->getOrders(['status' => 'Created']);
+        print_r($orders);
+        ]]>
+      </programlisting>
+    </section>
+  </chapter>
+  <chapter>
+    <title>License</title>
+    <para>This project is licensed under the MIT License.</para>
+  </chapter>
+</book>

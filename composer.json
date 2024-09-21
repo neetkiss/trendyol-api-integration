@@ -1,0 +1,28 @@
+{
+    "name": "neetfreya/trendyol-php-api",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trendyol\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trendyol\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "NeetFreya",
+            "email": "toroslu.toprak@gmail.com"
+        }
+    ]
+}
