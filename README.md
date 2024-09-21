@@ -8,7 +8,7 @@ This library provides a comprehensive PHP integration with Trendyol's API, allow
 To install the package, use Composer:
 
 ```bash
-composer require yourname/trendyol-php-api
+composer require neetkiss/trendyol-api-integration
 ```
 
 ## Features
