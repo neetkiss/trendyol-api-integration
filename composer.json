@@ -1,6 +1,7 @@
 {
     "name": "neetfreya/trendyol-php-api",
     "type": "library",
+    "description": "Made by Love for WuwiSoft",
     "license": "MIT",
     "require": {
         "php": "^7.2 || ^8.0",
